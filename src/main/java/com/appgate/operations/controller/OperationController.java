@@ -16,7 +16,7 @@ public class OperationController {
 	private OperationService operationService;
 	
 	@PostMapping("/operations/{operation}")
-    public void performOperation(@PathVariable String operation) {
-		operationService.performOperation(operation);
+    public double performOperation(@PathVariable String operation) {
+		return operationService.performOperation(operation);
     }
 }
