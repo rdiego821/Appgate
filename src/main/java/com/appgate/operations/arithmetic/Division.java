@@ -1,16 +1,13 @@
 package com.appgate.operations.arithmetic;
 
-public class Division extends ArithmeticOperation{
+import java.util.ArrayList;
 
-	@Override
-	public double performOperation() {
-		double result = super.operands.get(0);
-		   
-	    for(int i = 1; i < super.operands.size(); i++){
-		   result /= super.operands.get(i);
+public class Division implements IArithmeticOperation {
+	public double performOperation(ArrayList<Double> operands) {
+		double result = operands.get(0);
+	    for(int i = 1; i < operands.size(); i++){
+		   result /= operands.get(i);
 	    }
-	   
 	    return result;
 	}
-
 }
