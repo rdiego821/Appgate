@@ -1,7 +1,7 @@
 package com.appgate.commons;
 
 public enum OperationTypes {
-	addition, 
+	addition,  
 	substraction,
 	multiplication,
 	division,
