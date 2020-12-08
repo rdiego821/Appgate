@@ -2,6 +2,8 @@ package com.appgate.operations.arithmetic;
 
 import java.util.ArrayList;
 
+import com.appgate.operations.arithmetic.interfaces.IArithmeticOperation;
+
 public class Potentiation implements IArithmeticOperation{
 	public double performOperation(ArrayList<Double> operands) {
 		double result = operands.get(0);

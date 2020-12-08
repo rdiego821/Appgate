@@ -2,7 +2,7 @@ package com.appgate.operations.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.appgate.commons.Operation;
+import com.appgate.commons.OperationTypes;
 import com.appgate.operations.arithmetic.Addition;
 import com.appgate.operations.arithmetic.Division;
 import com.appgate.operations.arithmetic.Substraction;
@@ -27,7 +27,7 @@ public class OperationServiceImpl implements OperationService {
 		if(operationRepository.getOperands().size() >= 2) {
 			double result = 0;
 			
-			switch(Operation.valueOf(operationName)) {
+			switch(OperationTypes.valueOf(operationName)) {
 				case addition:
 					 result = new Addition().performOperation(operationRepository.getOperands());
 					 break;
